@@ -4,6 +4,19 @@ import React from 'react';
 function Home() {
     return (
         <main className="news-container">
+            {/*aqui começa o head*/}
+            <Head>
+                {/* 1. Título da Página (Aparece na aba do navegador) */}
+                <title>Uj_News</title>
+
+                {/* 2. Ícone da Aba (Favicon) */}
+                {/* A tag link com rel="icon" é usada para o favicon */}
+                <link rel="icon" href="./img/uj-i.png" /> 
+                {/* Se for uma imagem diferente, mude o caminho: */}
+                {/* <link rel="icon" href="/images/logo-32x32.png" /> */}
+                </Head>
+
+
             {/* Cabeçalho Fixo da Home Page */}
             <header className="main-header">
                 <h1>União Jovem Notícias.</h1>
