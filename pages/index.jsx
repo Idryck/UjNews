@@ -4,9 +4,6 @@ import React from 'react';
 function Home() {
     return (
         <main className="news-container">
-       
-
-
             {/* Cabeçalho Fixo da Home Page */}
             <header className="main-header">
                 <h1>União Jovem Notícias.</h1>
