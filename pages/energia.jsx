@@ -20,10 +20,10 @@ function Home() {
                 <h2 className="nav-title">Conheça nossas matérias</h2>
                 <ul className="nav-list"> 
                     <li className="nav-item">
-                        <a href="/artigos/socio-invisivel" className="nav-link">O Sócio Invisível</a>
+                        <a href="veiculos" className="nav-link">O Sócio Invisível</a>
                     </li>
                     <li className="nav-item">
-                        <a href="/artigos/energia-solar" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
+                        <a href="energia" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
                     </li>
                 </ul>
             </nav>
@@ -60,7 +60,7 @@ function Home() {
                         </p>
 
                         <p>
-                            Se o compromisso do governo atual é com a sustentabilidade e o povo, a desoneração da energia renovável deveria ser prioridade. Sem incentivos, o cenário aponta para uma migração em massa para sistemas <strong>Off-Grid</strong> (isolados da rede), deixando a infraestrutura pública ainda mais custosa para quem não tem capital para investir.
+                            Se o compromisso do governo atual é com a sustentabilidade e o povo a desoneração da energia renovável deveria ser prioridade. Sem incentivos, o cenário aponta para uma migração em massa para sistemas <strong>Off-Grid</strong> (isolados da rede), deixando a infraestrutura pública ainda mais custosa para quem não tem capital para investir.
                             e quem tem dinheiro para investir em energia solar, vai deixar um buraco no lucro da consessionária, que vai repassar esse custo para o consumidor final, ou seja, quem não tem dinheiro para investir em energia própria.
                             tudo recaíra sobre a classe média baixa e os pobres, e assim o governo irá aumentar seus impostos e te dar auxilio para pagar sua energia... uma verdadeira cilada.
                             

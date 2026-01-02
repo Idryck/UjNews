@@ -13,10 +13,10 @@ function Home() {
                 <h2 className="nav-title">Conheça nossas matérias</h2>
                 <ul className="nav-list"> 
                     <li className="nav-item">
-                        <a href="/artigos/socio-invisivel" className="nav-link">O Sócio Invisível</a>
+                        <a href="veiculos" className="nav-link">O Sócio Invisível</a>
                     </li>
                     <li className="nav-item">
-                        <a href="/artigos/energia-solar" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
+                        <a href="energia" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
                     </li>
                 </ul>
             </nav>
