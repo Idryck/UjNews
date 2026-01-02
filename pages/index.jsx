@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '/style/Layout.module.css';
+import styles from '/style/layout.module.css';
 
 /**
  * Componente Layout: Define a estrutura global que se repete em todas as páginas.
