@@ -1,76 +1,90 @@
 import React from 'react';
 
 /**
- * Componente Home: Versão corrigida e otimizada.
- * Foco em semântica HTML5, acessibilidade e precisão técnica sobre o setor elétrico.
+ * Componente Home: Análise Macroeconômica e Técnica da Geração Distribuída no Brasil.
+ * Autor: Lucas Souza
+ * Data: Janeiro de 2026
  */
 function Home() {
+    // Estilos inline para garantir a apresentação visual sem dependências externas
+    const styles = {
+        container: { maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: '"Inter", sans-serif', color: '#333', lineHeight: '1.6' },
+        header: { textAlign: 'center', borderBottom: '2px solid #f0f0f0', paddingBottom: '30px', marginBottom: '40px' },
+        tagline: { color: '#666', fontSize: '1.1rem', fontStyle: 'italic' },
+        nav: { backgroundColor: '#f9f9f9', padding: '20px', borderRadius: '8px', marginBottom: '40px' },
+        article: { backgroundColor: '#fff' },
+        highlight: { color: '#2c3e50', fontWeight: 'bold' },
+        quote: { borderLeft: '4px solid #e67e22', paddingLeft: '20px', margin: '30px 0', fontStyle: 'italic', color: '#555' },
+        footer: { marginTop: '60px', paddingTop: '20px', borderTop: '1px solid #eee', textAlign: 'center', fontSize: '0.85rem', color: '#999' }
+    };
+
     return (
-        <main className="news-container">
-            {/* Seção de Cabeçalho: Identidade Visual e Editorial */}
-            <header className="main-header">
-                <h1 className="main-title">União Jovem Notícias</h1>
-                <p className="tagline">
-                    Análise técnica sobre o panorama energético e os impactos socioeconômicos para a juventude brasileira.
-                </p>
+        <main style={styles.container}>
+            {/* Header Editorial */}
+            <header style={styles.header}>
+                <h1 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>União Jovem Notícias</h1>
+                <p style={styles.tagline}>A voz técnica da juventude sobre políticas públicas e infraestrutura</p>
             </header>
 
-            {/* Navegação Interna: Acessibilidade melhorada */}
-            <nav className="main-navigation" aria-label="Menu de matérias">
-                <h2 className="nav-title">Conheça nossas matérias</h2>
-                <ul className="nav-list"> 
-                    <li className="nav-item">
-                        <a href="veiculos" className="nav-link">O Sócio Invisível</a>
+            {/* Navegação Estruturada */}
+            <nav style={styles.nav}>
+                <h3 style={{ marginTop: 0 }}>Dossiês Disponíveis</h3>
+                <ul style={{ listStyleType: 'none', padding: 0 }}>
+                    <li style={{ marginBottom: '10px' }}>
+                        <a href="#artigo" style={{ color: '#3498db', textDecoration: 'none' }}>• Tributação Fotovoltaica: O Crepúsculo da Geração Distribuída</a>
                     </li>
-                    <li className="nav-item">
-                        <a href="energia" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
+                    <li style={{ marginBottom: '10px' }}>
+                        <a href="veiculos" style={{ color: '#3498db', textDecoration: 'none' }}>• O Sócio Invisível</a>
                     </li>
                 </ul>
             </nav>
 
-            {/* Conteúdo Principal: Artigo Técnico */}
-            <section className="article-content">
+            {/* Seção de Conteúdo Técnico */}
+            <section id="artigo" style={styles.article}>
                 <article>
-                    <header className="article-header">
-                        <h2>Imposto Solar: Desafios da Geração Distribuída e Viabilidade do Investimento</h2>
+                    <header>
+                        <h2 style={{ fontSize: '2rem', color: '#2c3e50' }}>A Armadilha do Fio B: Por que o "Imposto Solar" Ameaça a Democracia Energética?</h2>
                     </header>
 
-                    <div className="article-body">
+                    <div className="article-body" style={{ textAlign: 'justify' }}>
                         <p>
-                            O Brasil ostenta uma das matrizes energéticas mais sustentáveis do planeta, contudo, o custo da tarifa de energia elétrica permanece entre os mais onerosos para o consumidor final. 
-                            A transição para a fonte fotovoltaica é a resposta técnica para a independência energética, mas novas barreiras regulatórias impõem desafios ao <strong>ROI (Retorno sobre Investimento)</strong> do jovem brasileiro.
+                            O Brasil ostenta uma das matrizes energéticas mais sustentáveis do planeta, contudo, a eficiência técnica colide com a ineficiência regulatória. Atualmente, 88% da nossa geração provém de fontes renováveis, com a combinação eólica-solar atingindo <span style={styles.highlight}>23,7% da capacidade instalada</span>. Segundo a <strong>EPE</strong>, o setor fotovoltaico expandiu 39% em 2024, mas esse crescimento encontra agora um teto de vidro: o Marco Legal da GD (Lei 14.300).
                         </p>
 
                         <p>
-                            Geograficamente, o país é um polo de alta irradiação solar, com ciclos constantes e climas diversificados, condições ideais para fontes renováveis. Atualmente, 88% da nossa matriz é proveniente de fontes limpas (hidrelétricas, solar, eólica e biomassa). Desse total, a energia solar e eólica já representam 23,7% da capacidade instalada. Segundo dados da <strong>EPE (Empresa de Pesquisa Energética)</strong>, a geração solar cresceu expressivos 39% em 2024, reflexo da queda nos custos de insumos e avanços em semicondutores.
+                            A grande controvérsia reside na transição tarifária para sistemas <strong>On-Grid</strong>. O chamado "Imposto Solar" é, tecnicamente, a cobrança pelo uso da infraestrutura de distribuição (o <strong>Fio B</strong>). Em 2026, a incidência de 60% sobre os créditos injetados degrada severamente o <strong>ROI (Return on Investment)</strong>. O que antes era um investimento com <strong>Payback</strong> de 4 anos, agora se estende para 7 ou 8, desestimulando a microgeração distribuída.
+                        </p>
+
+                        <div style={styles.quote}>
+                            "A manutenção do Sol é uma metáfora irônica para o que o mercado chama de subsídio cruzado reverso: o governo taxa a inovação para manter o lucro regulado das concessionárias."
+                        </div>
+
+                        <p>
+                            Como investidor de players como <strong>Taesa (TAEE11)</strong> e <strong>Cemig (CMIG4)</strong>, compreendo a solidez das margens operacionais dessas companhias no segmento de transmissão e distribuição. Elas se beneficiam da infraestrutura centralizada. Contudo, do ponto de vista do desenvolvimento nacional, estamos diante da <strong>"Espiral da Morte" das concessionárias</strong>: quem possui capital migra para sistemas <strong>Off-Grid</strong> (isolados com baterias), abandonando a rede pública.
                         </p>
 
                         <p>
-                            A grande controvérsia reside no sistema <strong>On-Grid</strong> (conectado à rede de distribuição). Com o Marco Legal da Geração Distribuída (Lei 14.300), o chamado "Imposto Solar" — que na verdade é a incidência de encargos sobre o uso do <strong>Fio B</strong> da distribuidora — escalou significativamente. Em 2025, o impacto sobre o excedente injetado era de 45%; em 2026, esse valor atinge o patamar de 60%.
+                            Aqui reside o perigo socioeconômico: ao "desbancarizar" a energia, a rede pública perde seus usuários de maior poder aquisitivo. O custo fixo de manutenção da malha elétrica não diminui; ele é apenas rateado entre os que permanecem. Quem são eles? A classe média baixa e os vulneráveis, que não possuem os <strong>R$ 26.000,00</strong> necessários para um sistema básico ou terreno para usinas <strong>UFV</strong>.
                         </p>
 
                         <p>
-                            Isso significa que o excedente energético injetado na rede para gerar créditos sofre uma depreciação maior. Embora o sistema continue gerando economia na fatura, o <strong>Payback</strong> (prazo de retorno do capital) foi estendido, o que pode desestimular novos investimentos em microgeração e prejudicar a descentralização energética nacional.
-                        </p>
-
-       energia
-                        <p>
-                            A solução passa por políticas públicas que fomentem subsídios e linhas de crédito acessíveis, reduzindo a carga tributária sobre a microgeração. Penalizar o prosumidor (produtor + consumidor) favorece apenas o lucro de grandes concessionárias.
-                            Eu sou investidor de empresas energeticas como <strong>Taesa</strong> e <strong>Cemig</strong>, e sei quanto eles lucram com geração e transporte de energia, me beneficio hoje com isso, mas convenhamos, se o país não quer deixar o pequeno crescer vamos caçar junto aos peixes grandes.
+                            A tese de investimento em fundos como o <strong>SNEL11</strong> mostra que a energia solar é ultra-eficiente. Uma usina pequena (0,06 MWp) gera em um único dia o que uma residência média consome em um mês. Se temos a tecnologia, por que não a democratizamos? A resposta é política. Ao taxar o excedente, o governo cria uma dependência artificial.
                         </p>
 
                         <p>
-                            Se o compromisso do governo atual é com a sustentabilidade e o povo a desoneração da energia renovável deveria ser prioridade. Sem incentivos, o cenário aponta para uma migração em massa para sistemas <strong>Off-Grid</strong> (isolados da rede), deixando a infraestrutura pública ainda mais custosa para quem não tem capital para investir.
-                            e quem tem dinheiro para investir em energia solar, vai deixar um buraco no lucro da consessionária, que vai repassar esse custo para o consumidor final, ou seja, quem não tem dinheiro para investir em energia própria.
-                            tudo recaíra sobre a classe média baixa e os pobres, e assim o governo irá aumentar seus impostos e te dar auxilio para pagar sua energia... uma verdadeira cilada.
-                            
-                        
+                            O cenário para 2026 é cíclico e perverso: o governo aumenta impostos sobre o prosumidor, reduz a atratividade do investimento privado em renováveis e, para compensar a alta da tarifa causada pelo êxodo dos grandes consumidores, cria auxílios e subsídios para o pobre pagar a conta de luz. É a estatização da ineficiência: paga-se o imposto para receber o benefício, enquanto o lucro das concessionárias permanece blindado pelo contrato de concessão.
+                        </p>
+
+                        <p>
+                            Precisamos de uma desoneração real e de linhas de crédito que permitam que a energia solar não seja um luxo, mas um <strong>utility</strong> básico. Se o discurso oficial é de sustentabilidade, a prática tributária deve refletir a urgência da transição energética, e não servir de âncora para modelos de negócios do século passado.
                         </p>
                     </div>
 
-                  <footer style={{ marginTop: '50px', textAlign: 'center', fontSize: '0.8rem' }}>
-                    <p>&copy; 2025 União Jovem Notícias - Desenvolvido por Lucas Souza</p>
-                   </footer>   
+                    <footer style={styles.footer}>
+                        <p><strong>&copy; 2026 União Jovem Notícias</strong></p>
+                        <p>Análise por Lucas Souza | Curadoria Técnica de Infraestrutura e Energia</p>
+                        <p style={{ marginTop: '10px', fontSize: '0.7rem' }}>Dados baseados nos relatórios da EPE e indicadores de mercado B3.</p>
+                    </footer>
                 </article>
             </section>
         </main>
