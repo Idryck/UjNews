@@ -1,199 +1,95 @@
 import React from 'react';
+import styles from './Style/layout.module.css';
 
-
+/**
+ * Página: O Sócio Invisível (Veículos)
+ * Editada para integrar perfeitamente com o layout.module.css
+ */
 function Home() {
     return (
-        <main className="news-container">
-            {/* Cabeçalho Fixo da Home Page */}
-            <header className="main-header">
-                <h1>União Jovem Notícias.</h1>
-                <p className="tagline">Notícias públicas que impactam a vida dos jovens brasileiros!</p>
+        <main className={styles.container}>
+            {/* Cabeçalho Estruturado */}
+            <header className={styles.mainHeader}>
+                <h1>União Jovem Notícias</h1>
+                <p className={styles.tagline}>Notícias públicas que impactam a vida dos jovens brasileiros!</p>
             </header>
-             <nav className="main-navigation" aria-label="Menu de matérias">
-                <h2 className="nav-title">Conheça nossas matérias</h2>
-                <ul className="nav-list"> 
-                    <li className="nav-item">
-                        <a href="veiculos" className="nav-link">O Sócio Invisível</a>
+
+            {/* Navegação Padronizada */}
+            <nav className={styles.mainNavigation} aria-label="Menu de matérias">
+                <h2 className={styles.navTitle}>Conheça nossas matérias</h2>
+                <ul className={styles.navList}> 
+                    <li className={styles.navItem}>
+                        <a href="/veiculos" className={styles.navLink}>• O Sócio Invisível</a>
                     </li>
-                    <li className="nav-item">
-                        <a href="energia" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
+                    <li className={styles.navItem}>
+                        <a href="/energia" className={styles.navLink}>• Tributação Fotovoltaica: O Impacto no Setor de GD</a>
                     </li>
                 </ul>
             </nav>
-            <article className="news-article">
-                
-            <section>
-                    <header className="article-header">
-                        <h2>O Sócio Invisível</h2>
+
+            {/* Conteúdo do Artigo */}
+            <article>
+                <section>
+                    <header style={{ marginBottom: '30px' }}>
+                        <h2 style={{ fontSize: '2rem', color: '#2c3e50' }}>O Sócio Invisível: A Realidade Tributária sobre Rodas</h2>
                     </header>
                     
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                         Quando olhamos para um carro popular de entrada no Brasil, hoje beirando os R$ 70.000 ou R$ 80.000, 
                         não estamos olhando apenas para o custo de metal, plástico, borracha e engenharia. 
-                        <strong>Estamos olhando para um dos sistemas de arrecadação mais agressivos do planeta.</strong>
+                        <strong> Estamos olhando para um dos sistemas de arrecadação mais agressivos do planeta.</strong>
                     </p>
 
-                    <p>
-                        O sentimento de que a juventude está sendo "expulsa" do mercado de consumo não é vitimismo; é matemática tributária.
+                    <p style={{ textAlign: 'justify' }}>
+                        O sentimento de que a juventude está sendo "expulsa" do mercado de consumo não é vitimismo; é matemática tributária. Para entender a profundidade desse abismo, precisamos dissecar a anomalia brasileira: o Estado é o "sócio majoritário" de qualquer veículo zero quilômetro.
                     </p>
 
-                    <p>
-                        Para entender a profundidade do abismo entre a juventude atual e o veículo zero, precisamos dissecar a anomalia tributária brasileira: 
-                        o Estado brasileiro é o "sócio majoritário" de qualquer veículo zero quilômetro.
+                    <p style={{ padding: '15px', backgroundColor: '#f0f4f8', borderRadius: '8px', fontStyle: 'italic' }}>
+                        Prazer, meu nome é <strong>Lucas Souza</strong>, formado em Gestão de TI e indignado com a situação atual do Brasil. Este é o primeiro dossiê que o União Jovem apresenta.
                     </p>
 
-                    {/* Bloco de Apresentação do Autor - Estilizado como uma nota */}
-                    <p className="author-intro">
-                        <em>
-                            Bom! Prazer, meu nome é <strong>Lucas Souza</strong>, formado em Gestão de TI e indignado com a situação atual do Brasil. 
-                            E esse é o primeiro tema que o União Jovem irá tratar.
-                        </em>
-                    </p>
+                    <hr style={{ border: '0', borderTop: '1px solid #eee', margin: '40px 0' }} />
 
-                    <hr />
-
-                    <h3>A Engenharia do Custo: Um "Sócio" de 50%</h3>
+                    <h3 style={{ color: '#2c3e50' }}>A Engenharia do Custo: Um "Sócio" de até 50%</h3>
                     
-                    <p>
-                        No Brasil, o governo é o sócio majoritário da indústria automobilística, mas sem assumir nenhum risco de produção. 
-                        Enquanto em países como os Estados Unidos a carga tributária sobre um veículo gira em torno de 6% a 10% (cobrados no final da venda) 
-                        e no Japão cerca de 9%, no Brasil a mordida pode variar de <strong>30% a 48,6%</strong> do valor final do carro, dependendo da motorização e categoria.
+                    <p style={{ textAlign: 'justify' }}>
+                        Enquanto em países como os Estados Unidos a carga tributária sobre um veículo gira em torno de 6% a 10%, no Brasil a mordida pode variar de <strong>30% a 48,6%</strong> do valor final. Em um carro de R$ 80.000,00, aproximadamente R$ 38.000,00 são puramente tributos que não retornam em tecnologia ou segurança.
                     </p>
 
-                    <p>
-                        Isso significa que, em um carro popular de R$ 80.000,00, aproximadamente 
-                        R$ 35.000,00 a R$ 40.000,00 não pagam por tecnologia, nem por segurança, nem pelo lucro da montadora. 
-                        Esse valor é puramente tributo.
-                    </p>
-
-                    {/* Citação em Destaque (Blockquote) em vez de Code Block */}
-                    <blockquote className="highlight-quote">
-                        "Basicamente, o brasileiro trabalha meses para pagar
-                        o carro que vai dirigir, e outros meses para pagar
-                        o carro imaginário que o governo embolsou"
+                    <blockquote style={{ borderLeft: '4px solid #e67e22', paddingLeft: '20px', margin: '30px 0', fontStyle: 'italic', color: '#555', fontSize: '1.2rem' }}>
+                        "Basicamente, o brasileiro trabalha meses para pagar o carro que vai dirigir, e outros meses para pagar o carro imaginário que o governo embolsou."
                     </blockquote>
 
-                    <p>
-                        O problema é mais profundo do que a porcentagem final. O sistema tributário brasileiro opera em "cascata". 
-                        Antes do carro ficar pronto, a montadora paga impostos sobre a energia elétrica da fábrica, sobre o aço comprado da siderúrgica (que já pagou imposto), 
-                        sobre o pneu (que já pagou imposto sobre a borracha). Quando o carro chega na concessionária, incide-se imposto novamente sobre o valor total acumulado.
-                    </p>
-                    
-                    <p>
-                        Ou seja: nós pagamos imposto sobre o imposto que já foi pago nas etapas anteriores. 
-                        Isso infla o preço de custo de uma maneira que torna impossível para a indústria oferecer um produto barato, mesmo se ela quisesse sacrificar sua margem de lucro.
+                    <p style={{ textAlign: 'justify' }}>
+                        O sistema opera em "cascata": paga-se imposto sobre o imposto já pago nas etapas anteriores. Conheça os vilões do seu bolso:
                     </p>
 
-                    <p>
-                        E já que estamos falando de impostos, você conhece os impostos que são pagos?
-                    </p>
-
-                    {/* Lista Semântica Correta */}
-                    <ul className="tax-list">
-                        <li>
-                            <strong>IPI (Imposto sobre Produtos Industrializados):</strong> A taxa base que varia conforme a potência do motor.
-                        </li>
-                        <li>
-                            <strong>ICMS (Imposto sobre Circulação de Mercadorias e Serviços):</strong> O peso estadual, que incide sobre o valor já inflado pelo IPI.
-                        </li>
-                        <li>
-                            <strong>PIS/COFINS:</strong> Contribuições federais que incidem sobre o faturamento.
-                        </li>
+                    <ul style={{ paddingLeft: '20px', marginBottom: '30px' }}>
+                        <li style={{ marginBottom: '10px' }}><strong>IPI:</strong> Imposto sobre o produto industrializado, variável pela potência.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>ICMS:</strong> O peso estadual que incide sobre o valor já inflado.</li>
+                        <li style={{ marginBottom: '10px' }}><strong>PIS/COFINS:</strong> Contribuições federais sobre o faturamento.</li>
                     </ul>
 
-                    <p>
-                        Essa complexidade gera um custo operacional gigantesco apenas para calcular o quanto se deve pagar (o famoso "Custo Brasil"). 
-                        Para o jovem que está entrando no mercado de trabalho, isso cria uma barreira de entrada intransponível: 
-                        o salário de entrada não acompanhou a inflação desses impostos compostos.
+                    <p style={{ textAlign: 'justify' }}>
+                        Pagamos o carro mais caro do mundo para rodar nas piores estradas. O imposto e o IPVA anual não retornam em infraestrutura, gerando um ciclo de "perde-perde" financeiro para o jovem que tenta conquistar sua independência.
                     </p>
 
-                    <p>
-                        Se pagássemos impostos de nível escandinavo e tivéssemos estradas alemãs ou transporte público suíço, a discussão seria outra. 
-                        O ponto nevrálgico da frustração da nossa geração é que <strong>pagamos o carro mais caro do mundo para rodar nas piores estradas.</strong>
-                    </p>
-
-                    <p>
-                        O imposto pago na compra do veículo (e depois o IPVA anual) não retorna em infraestrutura de qualidade. 
-                        O jovem paga caro para ter o carro, paga caro para mantê-lo e ainda corre o risco de destruir a suspensão em uma cratera na via pública ou ter o bem roubado devido à insegurança pública. 
-                        É um "perde-perde" financeiro constante.
-                    </p>
-
-               <section className="reflection-section">
-                <h3>A Ilusão da Acessibilidade</h3>
-                <p>
-                    Sabendo disso, eu gostaria de convidar você a refletir: por que não fazemos uma reforma tributária agressiva para mudar isso? 
-                    Você, que hoje tem seus 20 a 30 anos, está satisfeito com essa realidade?
-                </p>
-                <p>
-                    Recentemente, vimos pautas como a do deputado Kim Kataguiri defendendo a facilitação da CNH e o fim da obrigatoriedade da autoescola. 
-                    A iniciativa é válida, <strong>entretanto, de que adianta ter uma CNH na carteira se você não consegue comprar o veículo para usar na garagem?</strong>
-                </p>
-                <p>
-                    Se você, assim como eu, vem de família humilde, sabe que não ganhará um carro de presente. 
-                    E sejamos realistas: seu tio ou tia que possui um veículo provavelmente vai "bancar a dificuldade" para deixar você praticar. 
-                    Não é por maldade, é pelo custo: o medo de um arranhão ou uma peça quebrada é real, pois o conserto é caríssimo e o risco de ficarem a pé é alto.
-                </p>
-            </section>
-
-            <section className="action-plan">
-                <h3>Como Mudamos o Jogo?</h3>
-                <p>
-                    Infelizmente, para alterarmos esse cenário, é necessário um processo complexo que envolve mudanças na legislação tributária. 
-                    Isso não é algo que um indivíduo consiga fazer sozinho, pois depende de ações a nível governamental, envolvendo o Poder Legislativo e o Executivo.
-                </p>
-                
-                <p>Mas os caminhos hoje disponíveis são claros:</p>
-                
-                <ul className="action-list">
-                    <li>
-                        <strong>1. Participação Política e Voto Consciente:</strong> 
-                        Eleger representantes (deputados estaduais, federais e senadores) que tenham propostas alinhadas ao nosso benefício. 
-                        Precisamos de gente que discuta a sério a reforma tributária e a redução de impostos sobre consumo (que, como vimos, é o vilão que infla o valor de tudo).
-                    </li>
-                    
-                    <li>
-                        <strong>2. Apoio a Projetos de Lei:</strong> 
-                        Acompanhar e apoiar ativamente projetos de lei que tramitam nas assembleias e no Congresso Nacional visando a redução ou simplificação dos impostos veiculares (IPI, ICMS, IPVA e PIS/Cofins).
-                    </li>
-                    
-                    <li>
-                        <strong>3. O Poder da Sociedade Civil Organizada:</strong> 
-                        Sinceramente, as outras opções são complicadas (a falta de educação política no Brasil muitas vezes favorece a reeleição de quem não nos representa). 
-                        Aqui entra o "4º Poder": a pressão pública. É hora de nos juntarmos a associações de classe e grupos de consumidores que fazem lobby e pressão real junto ao governo.
-                    </li>
-                    
-                    <li>
-                        <strong>4. Manifestação Pública e Pressão Digital:</strong> 
-                        Participar de movimentos sociais e assinar petições públicas. A internet tirou as barreiras físicas da manifestação; precisamos usar isso a nosso favor.
-                    </li>
-                </ul>
-            </section>
-
-            <section className="call-to-action">
-                <div className="manifesto-box">
-                    <h4>O Nascimento do União Jovem</h4>
-                    <p>
-                        Nesse momento, nós nascemos para dar voz a você, à sua família e aos seus amigos. 
-                        Precisamos de alguém que fale em nome dos jovens, precisamos criar uma "Frente Jovem" para reivindicar o que realmente importa.
-                    </p>
-                    
-                    <p>
-                        <strong>Pense comigo:</strong> se crescermos a ponto de chegar em um deputado e dizer: 
-                        <em>"Vou abrir uma live agora com uma estimativa de 100.000 jovens brasileiros assistindo. Se você não nos ouvir, esses 100.000 votos e a influência deles irão para o seu concorrente."</em>
-                    </p>
-                    
-                    <p>
-                        Essa pressão direta no Congresso funciona. Se, assim como eu, você acredita que podemos moldar o Brasil juntos, te convido a ser um elo dessa revolução. 
-                        Vamos juntos construir o Brasil que nós queremos — e que nós merecemos.
-                    </p>
-                </div>
-            </section>
+                    <section style={{ backgroundColor: '#fffcf4', padding: '25px', borderRadius: '12px', border: '1px solid #ffeeba', marginTop: '40px' }}>
+                        <h3 style={{ color: '#856404', marginTop: 0 }}>O Plano de Ação</h3>
+                        <p>Infelizmente, mudar esse cenário exige pressão política organizada. Os caminhos são:</p>
+                        <ul style={{ paddingLeft: '20px' }}>
+                            <li style={{ marginBottom: '10px' }}><strong>Participação Política:</strong> Eleger representantes comprometidos com a Reforma Tributária real.</li>
+                            <li style={{ marginBottom: '10px' }}><strong>Pressão Digital:</strong> Utilizar as redes para cobrar transparência nos gastos públicos.</li>
+                            <li style={{ marginBottom: '10px' }}><strong>União Jovem:</strong> Criar uma frente de pressão no Congresso para sermos ouvidos.</li>
+                        </ul>
+                    </section>
                 </section>
             </article>
 
-            {/* Rodapé do site */}
-            <footer style={{ marginTop: '50px', textAlign: 'center', fontSize: '0.8rem' }}>
-                <p>&copy; 2025 União Jovem Notícias - Desenvolvido por Lucas Souza</p>
+            {/* Rodapé Padronizado */}
+            <footer className={styles.mainFooter}>
+                <p>&copy; 2026 União Jovem Notícias - Desenvolvido por Lucas Souza</p>
+                <p style={{ fontSize: '0.7rem', marginTop: '5px' }}>Gestão de TI | Análise de Políticas Públicas</p>
             </footer>
         </main>
     );
