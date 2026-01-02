@@ -1,0 +1,72 @@
+/* styles/Layout.module.css */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.mainHeader {
+  text-align: center;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.mainHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.tagline {
+  color: #666;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.mainNavigation {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  border: 1px solid #eee;
+}
+
+.navTitle {
+  font-size: 1.2rem;
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 12px;
+}
+
+.navLink {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.mainFooter {
+  margin-top: 60px;
+  padding: 30px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #999;
+}

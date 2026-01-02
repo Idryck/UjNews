@@ -1,33 +1,37 @@
 import React from 'react';
+import styles from '/style/Layout.module.css';
 
+/**
+ * Componente Layout: Define a estrutura global que se repete em todas as páginas.
+ * O {children} é onde o conteúdo específico de cada página será injetado.
+ */
+export default function Layout({ children }) {
+  return (
+    <div className={styles.container}>
+      <header className={styles.mainHeader}>
+        <h1>União Jovem Notícias</h1>
+        <p className={styles.tagline}>Notícias públicas que impactam a vida dos jovens brasileiros!</p>
+      </header>
 
-function Home() {
-    return (
-        <main className="news-container">
-            {/* Cabeçalho Fixo da Home Page */}
-            <header className="main-header">
-                <h1>União Jovem Notícias.</h1>
-                <p className="tagline">Notícias públicas que impactam a vida dos jovens brasileiros!</p>
-            </header>
+      <nav className={styles.mainNavigation} aria-label="Menu de matérias">
+        <h2 className={styles.navTitle}>Conheça nossas matérias</h2>
+        <ul className={styles.navList}> 
+          <li className={styles.navItem}>
+            <a href="/veiculos" className={styles.navLink}>• O Sócio Invisível</a>
+          </li>
+          <li className={styles.navItem}>
+            <a href="/energia" className={styles.navLink}>• Tributação Fotovoltaica: O Impacto no Setor de GD</a>
+          </li>
+        </ul>
+      </nav>
 
-             <nav className="main-navigation" aria-label="Menu de matérias">
-                <h2 className="nav-title">Conheça nossas matérias</h2>
-                <ul className="nav-list"> 
-                    <li className="nav-item">
-                        <a href="veiculos" className="nav-link">O Sócio Invisível</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="energia" className="nav-link">Tributação Fotovoltaica: O Impacto no Setor de GD</a>
-                    </li>
-                </ul>
-            </nav>
-            <footer style={{ marginTop: '50px', textAlign: 'center', fontSize: '0.8rem' }}>
-                <p>&copy; 2025 União Jovem Notícias - Desenvolvido por Lucas Souza</p>
-            </footer>
-            </main>
-  
-    );
-    
+      {/* Aqui entra o conteúdo da página Home ou de qualquer outra página */}
+      <main>{children}</main>
+
+      <footer className={styles.mainFooter}>
+        <p>&copy; 2026 União Jovem Notícias - Desenvolvido por Lucas Souza</p>
+        <p style={{ fontSize: '0.7rem', marginTop: '5px' }}>Análise Técnica de Infraestrutura e Energia</p>
+      </footer>
+    </div>
+  );
 }
-
-export default Home;
