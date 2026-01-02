@@ -82,7 +82,7 @@ function Home() {
 
                     <footer style={styles.footer}>
                         <p><strong>&copy; 2026 União Jovem Notícias</strong></p>
-                        <p>Análise por Lucas Souza | Curadoria Técnica de Infraestrutura e Energia</p>
+                        <p><p>&copy; 2025 União Jovem Notícias - Desenvolvido por Lucas Souza</p></p>
                         <p style={{ marginTop: '10px', fontSize: '0.7rem' }}>Dados baseados nos relatórios da EPE e indicadores de mercado B3.</p>
                     </footer>
                 </article>
